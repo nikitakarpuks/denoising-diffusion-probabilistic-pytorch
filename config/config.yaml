@@ -1,0 +1,16 @@
+image_size: 32
+timesteps: 1000
+channels: 3
+batch_size: 128
+epochs: 51
+dataset_name: "cifar10" # code was tested with 3 "hugging face" datasets - mnist, fashion_mnist and cifar10
+
+schedule: 'cosine' # linear or cosine
+loss: 'l2' # l1 or l2
+sample: 256 # how many images you want to sample
+device: 'cuda' # cuda or cpu
+
+optimizer: 'Adamw'
+scheduler: 'ReduceLROnPlateau'
+patience: 2
+learning_rate: 0.001
